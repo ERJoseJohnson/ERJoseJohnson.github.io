@@ -43,6 +43,7 @@ function listGenerator(){
         if(imagesToRender){
             let body=""
             let counter=0
+            let column=["","","",""]
             for(const eachImage of imagesToRender){
                 let source=""
                 if(eachImage.type=="hosted"){
@@ -50,9 +51,7 @@ function listGenerator(){
                 }else{
                     source=eachImage.src
                 }
-                body+=`
-                        <div class="column">
-                        <img id="img_${counter}" src=${source} class="imgthumb"
+                column[counter%4]+=`<img id="img_${counter}" src=${source} class="imgthumb"
                             style="width:100%;max-width:300px"
                             onclick="document.getElementById('modal_${counter}').style.display = 'block'">
                         <div id="modal_${counter}" class="modal">
@@ -60,11 +59,11 @@ function listGenerator(){
                             <span class="close" id="close_${counter}"onclick="document.getElementById('modal_${counter}').style.display = 'none'">&times;</span>
                             <img src=${source} style="width:100%">
                             </div>
-                        </div>
-                        </div>
-                        `
+                        </div>`
                 counter+=1
-
+            }
+            for (const eachColumn of column){
+                body+=`<div class = "column">`+eachColumn+`</div>`
             }
             document.getElementById(eachTargetId).innerHTML=body
         }
@@ -76,7 +75,6 @@ async function init(){
     await loadImageData();
     listGenerator();
     console.log(document.getElementById("previousSchedules").innerHTML)
-    modalLoad()
 }
 
 window.addEventListener('DOMContentLoaded', init);

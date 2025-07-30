@@ -25,7 +25,9 @@ function grabImages(){
         //sets src of each image flagged with id (aka those that have hosted images on imgur) to related entry in json
         const entry= imageData.find(e=>e.name===eachImage.id);
         //console.log(entry.link)
-        imageReference.src=entry.link
+        if(entry){
+            imageReference.src=entry.link
+        }
     }
 }
 

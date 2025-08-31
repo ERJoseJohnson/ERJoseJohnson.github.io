@@ -21,12 +21,12 @@ function grabImages(){
     //console.log(imageList)
     for (const eachImage of images){
         //dont forget to give img an id that matches with the json name
-        imageReference=document.getElementById(eachImage.id);
+        //imageReference=document.getElementById(eachImage.id);
         //sets src of each image flagged with id (aka those that have hosted images on imgur) to related entry in json
         const entry= imageList.find(e=>e.name===eachImage.id);
         //console.log(entry.link)
         if(entry){
-            imageReference.src=entry.link
+            eachImage.src=entry.link
         }
     }
 }

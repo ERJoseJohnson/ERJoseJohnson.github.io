@@ -11,7 +11,35 @@ const previousSchedules=[
     {type:"local",src:"images/Term_Cards/Exodus.jpg"}
     ]
 
-var varMap={"previousSchedules":previousSchedules}
+const evangelismGallery=[
+    {type:"local",src:"images/Evangelism_Posters/DaD_Christmas_18.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/DaD_Christmas_19.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/DaD_Easter_19.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_200529.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_200619.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_200724.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_20200415.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT200612.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_190712.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_191008.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/GrillAPastor.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_191018.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_191122.jpg"},
+    {type:"local",src:"images/Evangelism_Posters/LTT_200207.jpg"}
+]
+
+const wallpaperGallery=[
+    {type:"local",src:"images/Wallpapers/IMG_0118.PNG"},
+    {type:"local",src:"images/Wallpapers/IMG_0125.PNG"},
+    {type:"local",src:"images/Wallpapers/IMG_0133.PNG"},
+    {type:"local",src:"images/Wallpapers/Psalm130Wallpaper.PNG"},
+    {type:"local",src:"images/Wallpapers/IMG_2689.PNG"},
+    {type:"local",src:"images/Wallpapers/IMG_2690.PNG"}
+]
+
+var varMap={"previousSchedules":previousSchedules,
+    "evangelismGallery":evangelismGallery,
+    "wallpaperGallery":wallpaperGallery}
 
 var imageData=[]
 
@@ -65,6 +93,7 @@ function listGenerator(){
             for (const eachColumn of column){
                 body+=`<div class = "column">`+eachColumn+`</div>`
             }
+            //console.log(eachTargetId)
             document.getElementById(eachTargetId).innerHTML=body
         }
         
@@ -74,7 +103,7 @@ function listGenerator(){
 async function init(){
     await loadImageData();
     listGenerator();
-    console.log(document.getElementById("previousSchedules").innerHTML)
+    //console.log(document.getElementById("evangelismGallery").innerHTML)
 }
 
 window.addEventListener('DOMContentLoaded', init);

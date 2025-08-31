@@ -49,71 +49,7 @@
 			<div class="spacer"></div>
 			<div class = "inner">
 				<h2 style="text-align: center">Wallpapers</h2>
-				<div class = "row-wallpaper" style = "text-align: center">
-
-					<div class = "column">
-						<img id="img_0" src="images/Wallpapers/IMG_0118.PNG" class="imgthumb" style="width:100%;max-width:300px">
-						<div id="modal_0" class="modal">
-							<div class="modal-content">
-								<span class="close" id = "close_0">&times;</span>
-								<img src="images/Wallpapers/IMG_0118.PNG" style="width:100%">
-							</div>
-						</div>
-
-					</div>
-
-				<div class="column">
-					<img id="img_1" src="images/Wallpapers/IMG_0125.PNG" class="imgthumb"
-						style="width:100%;max-width:300px">
-					<div id="modal_1" class="modal">
-						<div class="modal-content">
-							<span class="close" id="close_1">&times;</span>
-							<img src="images/Wallpapers/IMG_0125.PNG" style="width:100%">
-						</div>
-					</div>
-
-					<img id="img_2" src="images/Wallpapers/IMG_0133.PNG" class="imgthumb"
-						style="width:100%;max-width:300px">
-					<div id="modal_2" class="modal">
-						<div class="modal-content">
-							<span class="close" id="close_2">&times;</span>
-							<img src="images/Wallpapers/IMG_0133.PNG" style="width:100%">
-						</div>
-					</div>
-				</div>
-
-				<div class="column">
-					<img id="img_3" src="images/Wallpapers/Psalm130Wallpaper.PNG" class="imgthumb"
-						style="width:100%;max-width:300px">
-					<div id="modal_3" class="modal">
-						<div class="modal-content">
-							<span class="close" id="close_3">&times;</span>
-							<img src="images/Wallpapers/Psalm130Wallpaper.PNG" style="width:100%">
-						</div>
-					</div>
-
-					<img id="img_4" src="images/Wallpapers/IMG_2689.PNG" class="imgthumb"
-						style="width:100%;max-width:300px">
-					<div id="modal_4" class="modal">
-						<div class="modal-content">
-							<span class="close" id="close_4">&times;</span>
-							<img src="images/Wallpapers/IMG_2689.PNG" style="width:100%">
-						</div>
-					</div>
-				</div>
-
-				<div class="column">
-					<img id="img_5" src="images/Wallpapers/IMG_2690.PNG" class="imgthumb"
-						style="width:100%;max-width:300px">
-					<div id="modal_5" class="modal">
-						<div class="modal-content">
-							<span class="close" id="close_5">&times;</span>
-							<img src="images/Wallpapers/IMG_2690.PNG" style="width:100%">
-						</div>
-					</div>
-
-				</div>
-
+				<div id="wallpaperGallery" name="targetList" class = "row-wallpaper" style = "text-align: center">
 
 			</div>
 		</div>
@@ -139,6 +75,7 @@
 	</footer>
 
 	<!-- Scripts -->
+	<script src="assets/js/listGenerator.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -146,37 +83,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-
-
-		var modal = [];
-		var img = [];
-		var modalImg = [];
-		var span = [];
-
-		// need to update upper limit of i if increase number of wallpapers
-		for (var i = 0; i < 20; i++) {
-			// Get the modal
-			modal[i] = document.getElementById("modal_" + i.toString());
-			img[i] = document.getElementById("img_" + i.toString());
-
-			let currentIndex = i;
-
-			img[i].onclick = function () {
-				modal[currentIndex].style.display = "block";
-			}
-
-			// Get the <span> element that closes the modal
-			span[i] = document.getElementById("close_" + i.toString());
-
-			// When the user clicks on <span> (x), close the modal
-			span[i].onclick = function () {
-				modal[currentIndex].style.display = "none";
-			}
-		}
-
-
-	</script>
 </body>
 
 </html>

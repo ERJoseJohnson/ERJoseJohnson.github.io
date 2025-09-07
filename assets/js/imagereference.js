@@ -1,4 +1,4 @@
-let imageList=[]
+var imageList=[]
 
 //Loads the JSON
 async function loadimageList(){

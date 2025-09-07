@@ -49,13 +49,13 @@ const summerSSBCGallery=[{type:"hosted",id:"2025_SSBCScheduleSummer"}]
 
 const winterSSBCGallery=[{type:"hosted",id:"2024_SSBCScheduleWinter"}]
 
-var varMap={"previousSchedules":previousSchedules,
+let varMap={"previousSchedules":previousSchedules,
     "evangelismGallery":evangelismGallery,
     "wallpaperGallery":wallpaperGallery,
     "summerSSBCGallery":summerSSBCGallery,
     "winterSSBCGallery":winterSSBCGallery}
 
-var imageData=[]
+let imageData=[]
 
 async function loadImageData(){
     //console.log("yeah")

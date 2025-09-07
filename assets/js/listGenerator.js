@@ -12,6 +12,14 @@ const previousSchedules=[
     ]
 
 const evangelismGallery=[
+    {type:"hosted",id:"2025_TrivialPursuit"},
+    {type:"hosted",id:"2025_EmptyTomb"},
+    {type:"hosted",id:"2024_ChristmasUnwrapped"},
+    {type:"hosted",id:"2024_ChristofChristmas"},
+    {type:"hosted",id:"2024_BBQ&Identity"},
+    {type:"hosted",id:"2024_UltimateDesigner"},
+    {type:"hosted",id:"2024_WhatWouldGodDieFor"},
+    {type:"hosted",id:"2024_PieForYourThoughts"},
     {type:"local",src:"images/Evangelism_Posters/DaD_Christmas_18.jpg"},
     {type:"local",src:"images/Evangelism_Posters/DaD_Christmas_19.jpg"},
     {type:"local",src:"images/Evangelism_Posters/DaD_Easter_19.jpg"},
@@ -37,9 +45,15 @@ const wallpaperGallery=[
     {type:"local",src:"images/Wallpapers/IMG_2690.PNG"}
 ]
 
+const summerSSBCGallery=[{type:"hosted",id:"2025_SSBCScheduleSummer"}]
+
+const winterSSBCGallery=[{type:"hosted",id:"2024_SSBCScheduleWinter"}]
+
 var varMap={"previousSchedules":previousSchedules,
     "evangelismGallery":evangelismGallery,
-    "wallpaperGallery":wallpaperGallery}
+    "wallpaperGallery":wallpaperGallery,
+    "summerSSBCGallery":summerSSBCGallery,
+    "winterSSBCGallery":winterSSBCGallery}
 
 var imageData=[]
 
@@ -64,7 +78,7 @@ function listGenerator(){
         targetIds.push(eachList.id);
     }
 
-    console.log(targetIds)
+    //console.log(targetIds)
 
     for (const eachTargetId of targetIds){
         const imagesToRender=varMap[eachTargetId]

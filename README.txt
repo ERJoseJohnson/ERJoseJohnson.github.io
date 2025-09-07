@@ -61,9 +61,9 @@ How to Use:
 		- Note: I have added a placeholder: "images/singlepixel.jpg"
 		-if you need to add this capability to a new page, the script is: imagereference.js
 
-	2) How to use listGenerator.js for evangelism.html, wallpapers.html and biblestudies.html
+	2) How to use listGenerator.js for evangelism.html, wallpapers.html, ssbc.html and biblestudies.html
 		- What does listGenerator do?
-			- It automates the generation of the galleries you see in evangelism, wallpapers and biblestudies
+			- It automates the generation of the galleries you see in evangelism, wallpapers, ssbc and biblestudies
 			- NOTE: It isn't the most efficient but it will have to do for now
 
 		- How to use?
@@ -71,8 +71,8 @@ How to Use:
 			1 pick a div on the page you want to add a gallery to
 			2 mark the div with a unique id (this id will determine the arr name and the varMap name)
 			3 mark the div with the name "targetList" (all galleries using this listGenerator MUST have this name)
-			4 create an arr of javascript objects. Name this arr after the unique id you picked
-			4 stringify the var name you gave your arr and add it to varmap as the key e.g varMap={"previousSchedules":previousSchedules}
+			4 create an arr of javascript objects in listGenerator.js. Name this arr after the unique id you picked
+			4 stringify the var name you gave your arr and add it to varmap in listGenerator.js as the key e.g varMap={"previousSchedules":previousSchedules}
 
 			(START HERE IF YOU ARE ONLY UPDATING EXISTING GALLERIES)
 			5 fill up the corresponding arr (same as your div id) with your images IN ORDER e.g.{type:"hosted",id:"2025_BibleStudyPlanQ1"}, {type:"local",src:"images/Term_Cards/John.jpg"}

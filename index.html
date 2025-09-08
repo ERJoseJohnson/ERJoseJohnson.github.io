@@ -250,38 +250,6 @@
 	<script src="assets/js/main.js"></script>
   <!-- TODO: this should be saved as a script elsewhere -->
    <!-- I'm not sure if this script is vital for this page. -->
-	<script>
-
-			var slideIndex = 1;
-			showSlides(1,slideIndex);
-
-			// Next/previous controls
-			function plusSlides(idx,n) {
-			  showSlides(idx, slideIndex += n);
-			}
-
-			// Thumbnail image controls
-			function currentSlide(idx,n) {
-			  showSlides(idx, slideIndex = n);
-			}
-
-			function showSlides(idx,n) {
-			  var i;
-			  var slides = document.getElementsByClassName("mySlides"+idx);
-			  var dots = document.getElementsByClassName("dot"+idx);
-			  if (n > slides.length) {slideIndex = 1}
-			  if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			      slides[i].style.display = "none";
-			  }
-			  for (i = 0; i < dots.length; i++) {
-			      dots[i].className = dots[i].className.replace(" active", "");
-			  }
-			  slides[slideIndex-1].style.display = "block";
-			  dots[slideIndex-1].className += " active";
-			}
-
-		</script>
 </body>
 
 </html>

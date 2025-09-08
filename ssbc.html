@@ -6,8 +6,6 @@
 -->
 <html>
 
-  <!-- this page is currently hidden. TODO: see if we still want this around -->
-
 <head>
 	<title>SUTD Christian Fellowship</title>
 	<meta charset="utf-8" />
@@ -20,7 +18,8 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-	<body>
+<body>
+
 
 		<!-- Header -->
 		<header id="header">
@@ -32,12 +31,11 @@
 						<div id="menu">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li><a href="freshers.html">For freshers</a></li>
 								<li><a href="justlooking.html">Just Looking</a></li>
 								<li><a href="biblestudies.html">Weekly Bible study</a></li>
 								<li><a href="evangelism.html">Evangelism</a></li>
 								<li><a href="socials.html">Socials</a></li>
-								<li><a href="ssbc.html">SSBC</a></li>
+                                <li><a href="ssbc.html">SSBC</a></li>
 								<li><a href="testimonials.html">Testimonials</a></li>
 								<li><a href="wallpapers.html">Wallpapers</a></li>
 								<li><a href="contact.html">Contact us!</a></li>
@@ -48,36 +46,57 @@
 			</nav>
 		</header>
 
-		<!-- Main -->
+		<section id="ssbc-one" class="wrapper style5 alt2">
 
-		<section id="freshers-one" class="wrapper style5">
-			<div class="inner">
-				<div class="spacer"></div>
-					<h2>Welcome, class of 2024!</h2>
+			<div class="spotlight">
+				<div class="image-alt">
+					<h2>Singapore Student's Bible Conference</h2>
 
-						<div class="container-freshers">
+					<blockquote>And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.
+					</br>
+					<div style="margin-bottom:0.6em;"></div>
+					Hebrews 10:24-25 (ESV)
+					</blockquote>
 
-							<iframe src="https://www.youtube.com/embed/dJQYTOLAZjc" allowfullscreen 
-							class="video-freshers"></iframe>
+					Twice a year, students from 8 campus ministries gather at SMU to hear God's Word and worship together.</br></br>
+					<h1>Details</h1>SSBC occurs twice a year. Once in Summer and once in Winter. </br></br>
 
-						</div>
+					<b><u>Summer SSBC</u></b></br>
+					Summer SSBC consists of 6 weeks of talks about a book in the Bible, centered around a specific theme. You can view some examples of previous Summer SSBC schedules below.</br></br>
 
-					<div style="height:25px"></div>
+					<b><u>Winter SSBC</u></b></br>
+					Winter SSBC consists of a 4 day camp, filled with workshops, talks, bible studies and oh so many games. It is a fantastic time to worship with your peers from other Singaporean schools! You can view a sample Winter SSBC schedule below!</br></br>
 
-					Greetings dear freshers!
-					Welcome to a new chapter in your life at SUTD! We're excited to meet you, especially now that COVID measures have relaxed. </br></br>
-					We would love to get to in touch with you and get to know you better! If you are interested to join SUTDCF, please consider filling up our contact form and we will have someone contact you soonest!</br></br>
-
-
-					<a href="https://forms.office.com/r/qiupQYrSVH" class="button primary">Sign up form</a>
-
-
+					<h1>Interested?</h1>Subscribe to the <a href="https://t.me/SSBCupdates">SSBC Telegram channel</a> to receive updates on SSBC events and SSBC related news.</br></br>
+					Here are some examples of previous SSBC themes and schedules.
+				</div>
+				<div class="content-alt">
+					<img id="SSBCInfo" src="images/singlepixel.jpg" alt="Term Card" style="width:80%"/>
+					<img id="SSBCAllSchools" src="images/singlepixel.jpg" alt="Term Card" style="width:80%"/>
 				</div>
 
 			</div>
-
 		</section>
 
+		<section class="wrapper style2">
+
+			<div class="spacer"></div>
+			<div class = "inner">
+				<h2 style="text-align: center">Previous Summer SSBC Schedules</h2>
+				<!--Summer Gallery Div-->
+				<div id="summerSSBCGallery" name="targetList" class = "row-wallpaper" style = "text-align: center"></div></div>
+			</div>
+		</section>
+
+		<section class="wrapper style2">
+
+			<div class="spacer"></div>
+			<div class = "inner">
+				<h2 style="text-align: center">Previous Winter SSBC Schedules</h2>
+				<!--Summer Gallery Div-->
+				<div id="winterSSBCGallery" name="targetList" class = "row-wallpaper" style = "text-align: center"></div></div>
+			</div>
+		</section>
 
 		<!-- Footer -->
 		<footer id="footer">
@@ -99,6 +118,8 @@
 		</footer>
 
 	<!-- Scripts -->
+	<script src="assets/js/listGenerator.js"></script>
+	<script src="assets/js/imagereference.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>

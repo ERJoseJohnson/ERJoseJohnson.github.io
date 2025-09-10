@@ -57,30 +57,23 @@ let varMap={"previousSchedules":previousSchedules,
 
 let imageData=[]
 
-async function loadImageData(){
-    //console.log("yeah")
-    try{
-        const response= await fetch("assets/js/imagetest.json");
-        if(!response.ok)throw new Error(`Failed to load JSON: ${response.status}`);
-        imageData=await response.json();
-        //console.log("tryfailed")
-    } catch(error){
-        //console.log("catch")
-        console.error(error);
-    }
+const fs = require('fs');
+
+function loadImageData() {
+  try {
+    const raw = fs.readFileSync('./imagetest.json', 'utf8'); // path relative to script
+    imageData = JSON.parse(raw);
+    console.log(imageData);
+    return imageData;
+  } catch (error) {
+    console.error("Failed to load JSON:", error);
+  }
 }
 
+
 function listGenerator(){
-    const listsToFill=document.querySelectorAll('[name="targetList"]');
-    const targetIds=[]
-
-    for (const eachList of listsToFill){
-        targetIds.push(eachList.id);
-    }
-
     //console.log(targetIds)
-
-    for (const eachTargetId of targetIds){
+    for (const eachTargetId in varMap){
         const imagesToRender=varMap[eachTargetId]
         if(imagesToRender){
             let body=""
@@ -107,17 +100,13 @@ function listGenerator(){
             for (const eachColumn of column){
                 body+=`<div class = "column">`+eachColumn+`</div>`
             }
-            //console.log(eachTargetId)
-            document.getElementById(eachTargetId).innerHTML=body
+        console.log(eachTargetId)
+        console.log(body)
         }
         
     }
 }
 
-async function init(){
-    await loadImageData();
-    listGenerator();
-    //console.log(document.getElementById("evangelismGallery").innerHTML)
-}
 
-window.addEventListener('DOMContentLoaded', init);
+loadImageData();
+listGenerator();
